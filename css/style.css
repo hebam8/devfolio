@@ -41,15 +41,18 @@ a{
 /* end fixed */
 .main-title h2{
   letter-spacing: 1px;
-  position: relative;
+ 
   filter: drop-shadow(0 0 10px rgb(0 0 0 / 0.4));
 }
-.main-title h2::after{
+.main-title p{
+    position: relative;
+}
+.main-title p::after{
     content: '';
     position: absolute;
     width: 40px;
     height: 4px;
-    top:calc(100% + 35px);
+    top:calc(100% + 10px);
     left:50%;
     transform: translateX(-50%);
     background-color: var(--main-color);
@@ -231,10 +234,7 @@ filter: grayscale(0%);
     background: url(../images/overlay-bg.jpg)  no-repeat fixed center;
     background-size:cover ;
 }
-/* .testimonial .test-image{
-width: 150px !important;
-height: 40px !important;
-} */
+
 .testimonial  img{
   width: 120px !important;
   height: 120px !important;
@@ -243,38 +243,22 @@ height: 40px !important;
 .testimonial p{
     font-size: 12px !important;
 }
-.owl-nav {
-    width: fit-content;
-    margin: auto;
+
+.testimonial .owl-dots {
     display: flex;
-    gap: 10px;
-    font-size: 1.9rem;
-    color: white;
-    width: 50px;
-    height: 50px;
-    
- }
- .owl-nav {
-    width: fit-content;
-    margin: auto;
-    display: flex;
-    gap: 10px;
-    font-size: 1.9rem;
-    /* width: 20px;
-    height: 20px;
-    border-radius: 50%; */
-    /* background-color: white; */
-    
- }
-.owl-carousel .owl-nav button.owl-prev{
-    /* background-color: white; */
-    color: inherit;
-    border: none;
-    padding: 0!important;
-    font: inherit;
-    /* width: 20px;
-    height: 20px;
-    border-radius: 50%; */
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.testimonial .owl-dots .owl-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background:white;
+}
+.testimonial .owl-dots .owl-dot.active {
+    background:rgba(255, 255, 255, 0.432);
 }
 
 
@@ -361,27 +345,14 @@ background-color: var(--main-color);
 footer{
     height: 50px;
     background-color:  rgba(255,255,255,.55);
+  
 
 }
 footer .last{
-    margin: auto;
-    width: fit-content;
+display: grid;
+place-items: center;
+
 }
+
 /* end footer */
 
-.testimonial .owl-dots {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    margin-top: 20px;
-}
-
-.testimonial .owl-dots .owl-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background:white;
-}
-.testimonial .owl-dots .owl-dot.active {
-    background:rgba(255, 255, 255, 0.432);
-}
